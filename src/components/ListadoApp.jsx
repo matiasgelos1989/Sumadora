@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {AgregarTarea} from './agregarTarea'
-
+import {Historial} from './Historial'
 
 
 // keycode + = 187
@@ -39,7 +39,7 @@ const onAgregarTarea = (val)=>{
 }
 
 return (<div style={{color: 'white', padding: '50px'}}>
-      
+      <Historial></Historial>
       <AgregarTarea agregarTarea={onAgregarTarea}/>
       <ol style={{textAlign:'end'}}>
         {arreglo.map(item => <Item key={item.id} nombre={item.nombre} visto={item.visto} />)}
